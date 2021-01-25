@@ -10,20 +10,33 @@
     <link rel="apple-touch-icon" href="images/icon.png">
 </head>
 <body>
-    <p>Hello</p>
 
-    <table class="todotable">
-        <tr>
-            <th>Nr</th>
-            <th>Task</th>
-            <th>Priorität</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Test1</td>
-            <td>1</td>
-        </tr>
-    </table>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'maintab')" id="defaultOpen"></button>
+        <button class="tablinks" onclick="openTab(event, 'secondtab')"></button>
+    </div>
+
+    <div id="maintab" class="tabcontent">
+        <p>Hello</p>
+
+        <table class="todotable">
+            <tr>
+                <th>Nr</th>
+                <th>Task</th>
+                <th>Priorität</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Test1</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="secondtab" class="tabcontent">
+        <p>Hello</p>
+        <p>Dies ist Tab zwei</p>
+    </div>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -49,5 +62,10 @@
 
     <script src="src/index.js"></script>
     <script src="src/db.js"></script>
+    <script src="src/ui.js"></script>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
 </body>
 </html>
