@@ -27,3 +27,13 @@ const renderTodo = (data, id) => {
 
     todos.innerHTML += html;
 }
+
+function writeData() {
+
+    const todoItem = {
+        Text: "test",
+        Priority: "1"
+    }
+
+    db.collection('MyToDos').add(todoItem).catch(err => console.log(err));
+}
