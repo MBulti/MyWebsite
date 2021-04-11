@@ -31,8 +31,8 @@ const renderTodo = (data, id) => {
 function writeData() {
 
     const todoItem = {
-        Text: "test",
-        Priority: "1"
+        Text: document.getElementById('taskfield').value,
+        Priority: document.getElementById('priofield').value
     }
 
     db.collection('MyToDos').add(todoItem).catch(err => console.log(err));
