@@ -1,7 +1,8 @@
 const todos = document.querySelector('.todotable');
 
 // real time listener
-db.collection('MyToDos').onSnapshot((snapshot) => {
+//db.collection("MyToDos").orderBy("Priority", "desc").onSnapshot((snapshot) => {
+db.collection("MyToDos").onSnapshot((snapshot) => {
     //console.log(snapshot.docChanges());
     snapshot.docChanges().forEach(change => {
         //console.log(change, change.doc.data(), change.doc.id);
@@ -34,6 +35,8 @@ function writeData() {
         Text: document.getElementById('taskfield').value,
         Priority: document.getElementById('priofield').value
     }
+    document.getElementById('taskfield').value = null;
+    document.getElementById('priofield').value = null;
 
     db.collection('MyToDos').add(todoItem).catch(err => console.log(err));
 }
