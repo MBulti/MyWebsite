@@ -10,7 +10,6 @@
     <link rel="apple-touch-icon" href="images/icon.png">
 </head>
 <body>
-
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'maintab')" id="defaultOpen"></button>
         <button class="tablinks" onclick="openTab(event, 'secondtab')"></button>
@@ -37,7 +36,14 @@
         <p>Hello</p>
         <p>Dies ist Tab zwei</p>
         <input type="text" placeholder="Aufgabe" id="taskfield">
+        <br>
         <input type="text" placeholder="Priorität" id="priofield">
+        <br>
+        <select id="selectfield">
+            <option id="KatS">KAT</option>
+            <option id="LF10">LF10</option>
+            <option id="LF20">LF20</option>
+        </select>
         <button onclick="writeData()">Speichern</button>
     </div>
 
